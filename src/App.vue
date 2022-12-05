@@ -1,26 +1,54 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+	<div class="layout">
+		<AlbumHeaderVue />
+		<AlbumMainVue />
+		<AlbumFooterVue />
+	</div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import AlbumFooterVue from './components/template/AlbumFooter.vue';
+import AlbumHeaderVue from './components/template/AlbumHeader.vue';
+import AlbumMainVue from './components/template/AlbumMain.vue';
 
 export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
+	name: "App",
+	components: {
+		AlbumFooterVue,
+		AlbumHeaderVue,
+		AlbumMainVue
+	}
 }
+
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+:root {
+	--color1: #ffa601;
+	--color2: #ad7204;
+	--color3: #ffb325;
+}
+
+.layout {
+	height: 100vh;
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: 120px 1fr 0fr;
+	grid-template-areas: 
+	'header'
+	'main'
+	'footer';
+}
+
+.header {
+	grid-area: header;
+}
+
+.main {
+	grid-area: main;
+}
+
+.footer {
+	grid-area: footer;
 }
 </style>
