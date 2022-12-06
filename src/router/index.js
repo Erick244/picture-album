@@ -3,6 +3,7 @@ import PictureAlbum from "../components/view/PictureAlbum";
 import FormCreate from "../components/forms/FormCreate";
 import FormEdit from "../components/forms/FormEdit";
 import FormDelete from "../components/forms/FormDelete";
+import AlbumSlider from "../components/view/AlbumSlider";
 
 const routes = [
 	{
@@ -24,6 +25,11 @@ const routes = [
 		path: '/delete/:id',
 		name: "Delete",
 		component: FormDelete
+	},
+	{
+		path: '/slider',
+		name: "Slider",
+		component: AlbumSlider
 	}
 ]
 

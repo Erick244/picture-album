@@ -21,6 +21,7 @@ export default {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	position: relative;
 	background: linear-gradient(to right, var(--color1), #f7bf58);
 	box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.301);
 	z-index: 1;

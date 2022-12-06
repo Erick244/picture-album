@@ -6,7 +6,7 @@
 			</button>
 			<div class="search">
 				<input 
-					type="text" 
+					type="search" 
 					placeholder="Search for images..." 
 					v-model="search"
 				>
@@ -16,10 +16,7 @@
 			</div>
 		</div>
 		<hr>
-		<div v-if="loading" class="loadingImages">
-			<img src="../../assets/loading-gif.gif" alt="loading gif">
-		</div>
-		<div class="containerImages" v-else>
+		<div class="containerImages">
 			<AlbumImage v-for="(image, i) in images" 
 				:key="i"
 				:mainColor="image.mainColor"
@@ -43,7 +40,6 @@ export default {
 	},
 	data() {
 		return {
-			loading: false,
 			images: this.getImages(),
 			search: null
 		}
@@ -63,10 +59,8 @@ export default {
 	},
 	methods: {
 		getImages() {
-			this.loading = true;
 			get()
 				.then(data => this.images = data);
-			this.loading = false;
 		}
 	},
 	mounted() {
@@ -148,16 +142,6 @@ export default {
 
 .search>button:active {
 	opacity: 80%;
-}
-
-.loadingImages {
-	display: flex;
-	justify-content: center;
-	margin-top: 100px;
-}
-
-.loadingImages>img {
-	width: 50px;
 }
 
 .containerImages {

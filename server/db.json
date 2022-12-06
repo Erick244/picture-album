@@ -3,7 +3,7 @@
     {
       "title": "Imagem 1",
       "imageUrl": "https://images.pexels.com/photos/34107/milky-way-stars-night-sky.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      "mainColor": "#224c7e",
+      "mainColor": "#1b4472",
       "description": "Descrição 1",
       "id": 1
     },
@@ -13,6 +13,13 @@
       "mainColor": "#9d4a1b",
       "description": "Descrição 2",
       "id": 2
+    },
+    {
+      "title": "Imagem 3",
+      "imageUrl": "https://images.pexels.com/photos/235621/pexels-photo-235621.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "mainColor": "#dee1e8",
+      "description": "Descrição 3",
+      "id": 3
     }
   ]
 }
