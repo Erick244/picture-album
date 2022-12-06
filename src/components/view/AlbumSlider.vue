@@ -16,7 +16,10 @@
 			</div>
 			<div class="balls">
 				<div 
-					:class="{ball: true, current: current == (i-1)}" 
+					:class="{
+						ball: true,
+						current: current == (i-1),
+					}" 
 					v-for="i in images.length" 
 					:key="i" :id="(i-1)"
 					@click="setImageByBall">
@@ -65,8 +68,9 @@ export default {
 	},
 	mounted() {
 		this.getImages();
-		this.$route.query.image ?
-			this.current = this.$route.query.image - 1 : null;
+		if (this.$route.query.image > 0 && this.$route.query.image <= this.images.length) {
+			this.current = this.$route.query.image - 1;
+		}
 	}
 }
 </script>
@@ -135,10 +139,11 @@ export default {
 }
 
 .balls {
+	width: 100%;
 	display: flex;
+	justify-content: center;
 	position: absolute;
 	bottom: 0;
-	left: calc(50% - 45px);
 }
 
 .balls .ball {
@@ -158,6 +163,10 @@ export default {
 
 .ball.current {
 	background-color: #fff;
+}
+
+.manyBalls {
+	left: 10px;
 }
 
 .goBack {
