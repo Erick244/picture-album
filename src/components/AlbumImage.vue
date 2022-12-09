@@ -12,10 +12,6 @@
 				<router-link :to="`/delete/${ImageId}`" class="del">
 					Delete <i class="fa-solid fa-trash"></i>
 				</router-link>
-				<hr>
-				<router-link :to="`/slider/?image=${ImageId}`" class="expand">
-					Expand <i class="fa-solid fa-expand"></i>
-				</router-link>
 			</div>
 			<img :src="imageUrl">
 		</div>
@@ -107,10 +103,6 @@ export default {
 
 .del > i {
 	color: crimson;
-}
-
-.expand > i {
-	color: #2068ee;
 }
 
 .actions a:hover {

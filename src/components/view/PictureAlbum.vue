@@ -1,9 +1,14 @@
 <template>
 	<div class="containerAlbum">
 		<div class="utilities">
-			<button class="addImage" @click="($router.push('/newImage'))">
-				New Image <i class="fa-solid fa-image"></i>
-			</button>
+			<div class="buttons">
+				<button class="addImage" @click="($router.push('/newImage'))">
+					New Image <i class="fa-solid fa-image"></i>
+				</button>
+				<button class="sliderBtn" @click="($router.push('/slider'))">
+					Slider <i class="fa-solid fa-panorama"></i>
+				</button>
+			</div>
 			<div class="search">
 				<input 
 					type="search" 
@@ -36,7 +41,7 @@ import { get } from '../../api/album';
 export default {
 	name: "PictureAlbum",
 	components: {
-		AlbumImage
+		AlbumImage,
 	},
 	data() {
 		return {
@@ -88,7 +93,7 @@ export default {
 	margin: 20px 0px;
 }
 
-.addImage {
+.addImage, .sliderBtn {
 	padding: 13px 20px;
 	border-radius: 10px;
 	background-color: var(--color3);
@@ -101,13 +106,18 @@ export default {
 	transition: all 100ms ease;
 }
 
-.addImage:hover {
+.addImage:hover, .sliderBtn:hover {
 	transform: translateY(-3px);
 }
 
-.addImage:active {
+.addImage:active, .sliderBtn:active {
 	transform: translateY(0px);
 	opacity: 80%;
+}
+
+.sliderBtn {
+	margin-left: 20px;
+	background-color: #1360D2;
 }
 
 .search {

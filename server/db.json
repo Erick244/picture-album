@@ -1,25 +1,32 @@
 {
   "album": [
     {
-      "title": "Imagem 1",
-      "imageUrl": "https://images.pexels.com/photos/34107/milky-way-stars-night-sky.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      "mainColor": "#1b4472",
+      "title": "imagem 1",
+      "imageUrl": "https://images.pexels.com/photos/235621/pexels-photo-235621.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "mainColor": "#d8dbe2",
       "description": "Descrição 1",
       "id": 1
     },
     {
       "title": "Imagem 2",
-      "imageUrl": "https://images.pexels.com/photos/273935/pexels-photo-273935.jpeg?auto=compress&cs=tinysrgb&w=1600",
-      "mainColor": "#9d4a1b",
+      "imageUrl": "https://images.pexels.com/photos/3408744/pexels-photo-3408744.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "mainColor": "#264a6e",
       "description": "Descrição 2",
       "id": 2
     },
     {
       "title": "Imagem 3",
-      "imageUrl": "https://images.pexels.com/photos/235621/pexels-photo-235621.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      "mainColor": "#dee1e8",
+      "imageUrl": "https://images.pexels.com/photos/540518/pexels-photo-540518.jpeg?auto=compress&cs=tinysrgb&w=400",
+      "mainColor": "#659894",
       "description": "Descrição 3",
       "id": 3
+    },
+    {
+      "title": "Imagem 4",
+      "imageUrl": "https://images.pexels.com/photos/1166209/pexels-photo-1166209.jpeg?auto=compress&cs=tinysrgb&w=400",
+      "mainColor": "#824e7a",
+      "description": "Descrição 4",
+      "id": 4
     }
   ]
 }

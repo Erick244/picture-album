@@ -1,32 +1,30 @@
 <template>
 	<div class="containerSlider">
-		<div class="slider">
+		<div class="slider" :style="{
+			borderColor: images[current].mainColor,
+			boxShadow: `0px 0px 10px ${images[current].mainColor}`
+		}">
 			<button class="previous" @click="previous">
 				<i class="fa-solid fa-chevron-left"></i>
 			</button>
 			<button class="next" @click="next">
 				<i class="fa-solid fa-chevron-right"></i>
 			</button>
-			<div class="images" 
-				:style="{ transform: `translateX(${-700 * current}px)` }">
-				<div class="image" :key="i"
-					v-for="(image, i) in images">
+			<div class="images" :style="{ transform: `translateX(${-700 * current}px)` }">
+				<div class="image" :key="i" v-for="(image, i) in images">
 					<img :src="image.imageUrl">
 				</div>
 			</div>
 			<div class="balls">
-				<div 
-					:class="{
-						ball: true,
-						current: current == (i-1),
-					}" 
-					v-for="i in images.length" 
-					:key="i" :id="(i-1)"
-					@click="setImageByBall">
+				<div :class="{
+					ball: true,
+					current: current == (i - 1),
+				}" v-for="i in images.length" :key="i" :id="(i - 1)" @click="setImageByBall">
 				</div>
 			</div>
 		</div>
-		<button class="goBack" @click="($router.push('/'))">
+		<button class="goBack" @click="($router.push('/'))"
+			:style="{ backgroundColor: images[current].mainColor}">
 			<i class="fa-solid fa-house"></i>
 		</button>
 	</div>
@@ -65,12 +63,6 @@ export default {
 		setImageByBall(e) {
 			this.current = e.target.id;
 		}
-	},
-	mounted() {
-		this.getImages();
-		if (this.$route.query.image > 0 && this.$route.query.image <= this.images.length) {
-			this.current = this.$route.query.image - 1;
-		}
 	}
 }
 </script>
@@ -85,20 +77,23 @@ export default {
 	flex-direction: column;
 	margin: auto;
 	padding: 25px;
-	border-radius: 0px 0px 10px 10px;
 	background-color: #fff;
 	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.267);
 }
 
 .slider {
+	transition: all 300ms ease;
 	width: 700px;
 	height: 500px;
+	border: 3px solid;
 	position: relative;
 	border-radius: 20px;
+	box-shadow: 0px 0px 10px;
 	overflow: hidden;
 }
 
-.previous, .next  {
+.previous,
+.next {
 	position: absolute;
 	cursor: pointer;
 	background-color: transparent;
@@ -119,11 +114,13 @@ export default {
 	right: 20px;
 }
 
-.previous:hover, .next:hover {
+.previous:hover,
+.next:hover {
 	transform: scale(1.1);
 }
 
-.previous:active, .next:active {
+.previous:active,
+.next:active {
 	transform: scale(1);
 }
 
@@ -143,7 +140,7 @@ export default {
 	display: flex;
 	justify-content: center;
 	position: absolute;
-	bottom: 0;
+	bottom: 10px;
 }
 
 .balls .ball {
@@ -173,13 +170,13 @@ export default {
 	margin-top: 30px;
 	padding: 13px 30px;
 	cursor: pointer;
-	background-color: var(--color1);
 	border: none;
 	border-radius: 10px;
 	color: #fff;
 	font-size: 1.5rem;
 	box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.24);
-	transition: all 50ms ease;
+	text-shadow: 0px 0px 8px rgba(0, 0, 0, 0.281);
+	transition: all 300ms ease;
 }
 
 .goBack:active {
