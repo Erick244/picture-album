@@ -23,8 +23,7 @@
 				</div>
 			</div>
 		</div>
-		<button class="goBack" @click="($router.push('/'))"
-			:style="{ backgroundColor: images[current].mainColor}">
+		<button class="goBack" @click="($router.push('/'))" :style="{ backgroundColor: images[current].mainColor }">
 			<i class="fa-solid fa-house"></i>
 		</button>
 	</div>
@@ -91,6 +90,7 @@ export default {
 	box-shadow: 0px 0px 10px;
 	overflow: hidden;
 }
+
 
 .previous,
 .next {
@@ -181,5 +181,12 @@ export default {
 
 .goBack:active {
 	opacity: 80%;
+}
+
+@media (max-width: 768px) {
+	.slider {
+		width: 300px;
+		height: 500px;
+	}
 }
 </style>

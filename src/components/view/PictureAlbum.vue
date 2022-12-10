@@ -160,4 +160,18 @@ export default {
 	flex-wrap: wrap;
 	margin-top: 30px;
 }
+
+@media (max-width: 768px) {
+	.containerAlbum {
+		padding: 5px;
+	}
+
+	.utilities {
+		flex-direction: column;
+	}
+
+	.search {
+		margin-top: 20px;
+	}
+}
 </style>

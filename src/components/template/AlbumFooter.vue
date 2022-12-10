@@ -35,4 +35,10 @@ export default {
 	color: var(--color2);
 	text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.082);
 }
+
+@media (max-width: 768px) {
+	.footer {
+		justify-content: center;
+	}
+}
 </style>
